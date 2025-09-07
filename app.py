@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
-from pyzbar.pyzbar import decode
-from PIL import Image
+import cv2
+import numpy as np
 import firebase_admin
 from firebase_admin import credentials, db
 
@@ -22,11 +22,13 @@ def analyze_qr():
         return jsonify({'success': False})
     file = request.files['qr_image']
     try:
-        img = Image.open(file.stream)
-        result = decode(img)
-        if result:
-            qr_data = result[0].data.decode('utf-8')
-            return jsonify({'success': True, 'qr_data': qr_data})
+        # Read image file as bytes and convert to numpy array
+        file_bytes = np.frombuffer(file.read(), np.uint8)
+        img = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
+        detector = cv2.QRCodeDetector()
+        data, points, _ = detector.detectAndDecode(img)
+        if points is not None and data:
+            return jsonify({'success': True, 'qr_data': data})
         else:
             return jsonify({'success': False})
     except Exception as e:

@@ -1,4 +1,4 @@
 flask
-pyzbar
+opencv-python
 pillow
 firebase-admin
