@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Save</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body class="dark-bg center-bg">
+    <div class="container">
+      <h1>Admin Login</h1>
+      <form
+        id="login-form"
+        style="display: flex; flex-direction: column; gap: 16px"
+      >
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+        <button type="submit" class="download-btn">Login</button>
+      </form>
+      <button
+        id="logout-btn"
+        class="download-btn"
+        style="display: none; margin-bottom: 16px"
+      >
+        Logout
+      </button>
+      <div id="main-ui" style="display: none">
+        <h1>Upload or Scan QR Code</h1>
+        <form id="qr-form">
+          <label for="qr-input">Upload QR Image</label>
+          <input type="file" id="qr-input" accept="image/*" />
+          <button type="button" id="camera-btn">Open Camera (Mobile)</button>
+        </form>
+        <div id="qr-result" class="qr-card" style="display: none">
+          <img
+            id="qr-img"
+            class="qr-img"
+            src=""
+            alt="QR Preview"
+            style="display: none"
+          />
+          <div id="qr-data" class="qr-message"></div>
+          <button id="approve-btn" class="download-btn">Approve</button>
+        </div>
+      </div>
+    </div>
+    <!-- Removed firebase.js, now handled in login.js -->
+    <script src="/static/qr.js"></script>
+    <script type="module" src="/static/login.js"></script>
+  </body>
+</html>

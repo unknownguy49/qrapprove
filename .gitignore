@@ -1,0 +1,16 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore environment files
+.env
+venv/
+
+# Ignore Firebase credentials
+firebase_key.json
+
+# Ignore uploads (if any)
+uploads/
+
+# Ignore VS Code settings
+.vscode/

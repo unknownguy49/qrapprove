@@ -1,0 +1,133 @@
+/* Centerize the logout button */
+#logout-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  width: 60%;
+  max-width: 320px;
+}
+body.dark-bg {
+  background: #181a20;
+  color: #e0e0e0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+body.center-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.container {
+  max-width: 540px;
+  width: 100%;
+  margin: 48px auto;
+  padding: 48px 40px;
+  box-sizing: border-box;
+  background: #23272f;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+h1 {
+  color: #f7c873;
+  margin-bottom: 32px;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-size: 2.2rem;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 18px;
+  align-items: center;
+}
+label {
+  color: #f7c873;
+  font-weight: 500;
+  margin-bottom: 6px;
+  text-align: left;
+  display: block;
+  align-self: flex-start;
+}
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2c313c;
+  color: #e0e0e0;
+  font-size: 1.05rem;
+  width: 100%;
+}
+button {
+  background: linear-gradient(90deg, #f7c873 0%, #e67e22 100%);
+  color: #181a20;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 1.15rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s;
+  width: 80%;
+  max-width: 320px;
+  align-self: center;
+}
+button:hover {
+  background: linear-gradient(90deg, #e67e22 0%, #f7c873 100%);
+}
+.qr-card {
+  background: #23272f;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(247, 200, 115, 0.15);
+  padding: 24px 16px;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.qr-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(247, 200, 115, 0.25);
+  margin-bottom: 16px;
+  background: #181a20;
+  padding: 8px;
+}
+.qr-message {
+  color: #f7c873;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+.download-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 28px;
+  background: linear-gradient(90deg, #f7c873 0%, #e67e22 100%);
+  color: #181a20;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(247, 200, 115, 0.15);
+  transition: background 0.2s;
+}
+.download-btn:hover {
+  background: linear-gradient(90deg, #e67e22 0%, #f7c873 100%);
+  color: #23272f;
+}
+.user-info {
+  margin-top: 16px;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
